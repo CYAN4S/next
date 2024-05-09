@@ -33,6 +33,7 @@ public partial struct RotatingCubeSystem : ISystem
     }
     
     [BurstCompile]
+    [WithNone(typeof(Player))]
     public partial struct RotatingCubeJob : IJobEntity
     {
         public float deltaTime;
